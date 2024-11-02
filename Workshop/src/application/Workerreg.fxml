@@ -10,7 +10,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.worController">
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.worController">
    <children>
       <ImageView fitHeight="627.0" fitWidth="600.0" layoutY="-1.0" pickOnBounds="true">
          <image>
@@ -21,7 +21,7 @@
       <Label layoutX="135.0" layoutY="241.0" text="Job role in workshop" textFill="#fcf5f5" />
       <TextField fx:id="txtHoursPerWeek" layoutX="280.0" layoutY="178.0" prefHeight="40.0" prefWidth="208.0" />
       <TextField fx:id="txtJobRole" layoutX="280.0" layoutY="229.0" prefHeight="40.0" prefWidth="208.0" />
-      <Button fx:id="btnSubmit" layoutX="276.0" layoutY="572.0" mnemonicParsing="false" onAction="#handleSubmit" text="Submit" />
+      <Button fx:id="btnSubmit" layoutX="223.0" layoutY="574.0" mnemonicParsing="false" onAction="#handleSubmit" text="Finish The Request" />
       <Label layoutX="139.0" layoutY="295.0" text="Years of experiance" textFill="#f8eeee" />
       <TextField fx:id="txtYearsExperience" layoutX="280.0" layoutY="283.0" prefHeight="40.0" prefWidth="208.0" />
       <Label layoutX="94.0" layoutY="346.0" prefHeight="18.0" prefWidth="186.0" text="Preferred shift (8 continued hours)" textFill="#f8f5f5" />

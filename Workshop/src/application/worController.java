@@ -2,12 +2,22 @@ package application;
 
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ChoiceBox;
 
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
 // import javafx.scene.control.ToggleGroup;
 import javafx.event.ActionEvent;
 
@@ -45,6 +55,15 @@ public class worController {
 
     @FXML
     private Button btnSubmit;
+    
+    
+    
+    @FXML
+    private AnchorPane anchorpane;
+    private Parent root;
+    private Stage stage;
+    private Scene scene;
+    
 
    // private ToggleGroup physicalCapabilityGroup;
  //   private ToggleGroup emergencyAvailabilityGroup;
@@ -73,7 +92,7 @@ public class worController {
     
     
 @FXML
-    private void handleSubmit(ActionEvent event) {
+    private void handleSubmit(ActionEvent event) throws IOException {
     	
     	
     	
@@ -110,7 +129,37 @@ public class worController {
         System.out.println("Emergency Availability: " + emergencyAvailability);
 
         // Optionally clear fields after submission
-        clearFields();
+      //  clearFields();
+        
+        
+        String message = "Hours Available per Week: " + hoursPerWeek + "\n" +
+                "Job Role: " + jobRole + "\n" +
+                "Years of Experience: " + yearsExperience + "\n" +
+                "Preferred Shift: " + preferredShift + "\n" +
+                "Employment Status: " + employmentStatus + "\n" +
+                "Transportation Availability: " + transportAvailability + "\n" +
+                "Physical Capability: " + physicalCapability + "\n" +
+                "Emergency Availability: " + emergencyAvailability;
+        
+        Alert alert = new Alert(AlertType.INFORMATION);
+        alert.setTitle("Request Sent, Information Submitted");
+        alert.setHeaderText("Your Details:");
+        alert.setContentText(message);
+        alert.showAndWait();
+        
+        
+        
+        stage = (Stage) anchorpane.getScene().getWindow();
+		FXMLLoader Loader = new FXMLLoader (getClass().getResource("mainscreen.fxml"));
+		root= Loader.load();			  	  
+		 // stage =(Stage)((Node)e.getSource()).getScene().getWindow();  // e : action event
+		scene = new Scene(root); 
+		stage.setTitle("Main page");
+		
+        stage.setScene(scene);
+        stage.show();
+        
+        
     }
 
     private void clearFields() {

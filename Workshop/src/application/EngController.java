@@ -1,16 +1,30 @@
 package application;
 
 	import javafx.fxml.FXML;
-	import javafx.scene.control.Button;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 	import javafx.scene.control.RadioButton;
 	import javafx.scene.control.TextArea;
+
+import java.io.IOException;
+
 //	import javafx.scene.control.ToggleGroup;
 	import javafx.event.ActionEvent;
-	import javafx.scene.control.Alert;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 	import javafx.scene.control.Alert.AlertType;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 	public class EngController {
 
+		
+		
+	//    @FXML
+	//    private AnchorPane anchorpane;
+		
+		
 	    @FXML
 	    private RadioButton maleRadioButton;
 
@@ -38,9 +52,16 @@ package application;
 	    }
 */
 	    
+	    @FXML
+	    private AnchorPane anchorpane;
+	    private Parent root;
+	    private Stage stage;
+	    private Scene scene;
+	    
+	    
 	    // Method to handle finish button click
 	    @FXML
-	    private void handleFinishButton(ActionEvent event) {
+	    private void handleFinishButton(ActionEvent event) throws IOException {
 	        // Get the input values
 	        String selectedGender = maleRadioButton.isSelected() ? "Male" : femaleRadioButton.isSelected() ? "Female" : "Not specified";
 	        String certificatesText = certificates.getText();
@@ -55,10 +76,21 @@ package application;
 
 	        // Show the information in an alert dialog
 	        Alert alert = new Alert(AlertType.INFORMATION);
-	        alert.setTitle("Information Submitted");
+	        alert.setTitle("Information Submitted, Request Sent");
 	        alert.setHeaderText("Your Details:");
 	        alert.setContentText(message);
 	        alert.showAndWait();
+	        
+	        
+	        stage = (Stage) anchorpane.getScene().getWindow();
+			FXMLLoader Loader = new FXMLLoader (getClass().getResource("mainscreen.fxml"));
+			root= Loader.load();			  	  
+			 // stage =(Stage)((Node)e.getSource()).getScene().getWindow();  // e : action event
+			scene = new Scene(root); 
+			stage.setTitle("Main page");
+			
+	        stage.setScene(scene);
+	        stage.show();
 	    }
 	}
 
