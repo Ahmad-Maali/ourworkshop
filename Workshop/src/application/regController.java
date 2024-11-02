@@ -119,6 +119,13 @@ public class regController {
         
         else if (workerRadio.isSelected()) {
             role = "Worker";
+            
+			  FXMLLoader Loader = new FXMLLoader (getClass().getResource("Workerreg.fxml"));
+			  root= Loader.load();			  	  
+			  scene = new Scene(root); 
+			  stage.setTitle("Worker Registration");
+            
+            
         }
 
         // Validate fields 

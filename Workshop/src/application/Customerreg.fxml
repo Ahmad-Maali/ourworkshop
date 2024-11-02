@@ -5,33 +5,37 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.cusController">
    <children>
       <ImageView fitHeight="468.0" fitWidth="600.0" pickOnBounds="true">
          <image>
             <Image url="@regis.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="181.0" layoutY="178.0" text="Gender" textFill="#f8f3f3" />
-      <Label layoutX="154.0" layoutY="221.0" text="Financial capacity" textFill="#fcf9f9" />
-      <Label layoutX="140.0" layoutY="276.0" prefHeight="17.0" prefWidth="116.0" text="Discription of project" textFill="#fffbfb" />
-      <RadioButton layoutX="258.0" layoutY="178.0" mnemonicParsing="false" text="Male" textFill="#f8f3f3" />
-      <RadioButton layoutX="374.0" layoutY="178.0" mnemonicParsing="false" text="Female" textFill="#f8f3f3" />
-      <Button layoutX="211.0" layoutY="418.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="116.0" text="Finish The Request" />
-      <TextField layoutX="258.0" layoutY="314.0" prefHeight="42.0" prefWidth="200.0" />
-      <Label layoutX="154.0" layoutY="335.0" text="Name of project" textFill="#f8f6f6" />
+      <Label layoutX="182.0" layoutY="172.0" text="Gender" textFill="#f8f3f3" />
+      <Label layoutX="135.0" layoutY="225.0" text="Financial capacity" textFill="#fcf9f9" />
+      <Label layoutX="124.0" layoutY="282.0" prefHeight="17.0" prefWidth="116.0" text="Discription of project" textFill="#fffbfb" />
+      <RadioButton fx:id="radioMale" layoutX="275.0" layoutY="172.0" mnemonicParsing="false" text="Male" textFill="#f8f3f3">
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="radioFemale" layoutX="375.0" layoutY="172.0" mnemonicParsing="false" text="Female" textFill="#f8f3f3" toggleGroup="$gender" />
+      <Button fx:id="btnFinishRequest" layoutX="238.0" layoutY="424.0" mnemonicParsing="false" onAction="#handleFinishRequest" prefHeight="26.0" prefWidth="130.0" text="Finish The Request" />
+      <TextField fx:id="txtProjectName" layoutX="245.0" layoutY="330.0" prefHeight="26.0" prefWidth="234.0" promptText="Name your project as you want" />
+      <Label layoutX="141.0" layoutY="330.0" prefHeight="26.0" prefWidth="94.0" text="Project name" textFill="#f8f6f6" />
       <ImageView fitHeight="150.0" fitWidth="346.0" layoutX="130.0" pickOnBounds="true">
          <image>
             <Image url="@keyy.jpg" />
          </image>
       </ImageView>
-      <TextArea layoutX="258.0" layoutY="263.0" prefHeight="42.0" prefWidth="200.0" />
-      <TextArea layoutX="258.0" layoutY="208.0" prefHeight="42.0" prefWidth="200.0" />
-      <TextField layoutX="258.0" layoutY="370.0" prefHeight="25.0" prefWidth="200.0" />
-      <Label layoutX="188.0" layoutY="374.0" text="Location" textFill="#fffdfd" />
+      <TextArea fx:id="txtDescription" layoutX="245.0" layoutY="268.0" prefHeight="56.0" prefWidth="234.0" promptText="Is your home not yet built? Or is it under construction and you want to modify it? What type of work do you want?" />
+      <TextArea fx:id="txtFinancialCapacity" layoutX="245.0" layoutY="206.0" prefHeight="56.0" prefWidth="234.0" />
+      <TextField fx:id="txtLocation" layoutX="245.0" layoutY="363.0" prefHeight="26.0" prefWidth="234.0" />
+      <Label layoutX="139.0" layoutY="366.0" prefHeight="18.0" prefWidth="94.0" text="Project location" textFill="#fffdfd" />
    </children>
 </AnchorPane>
