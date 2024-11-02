@@ -9,7 +9,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="617.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
    <children>
       <ImageView fitHeight="617.0" fitWidth="600.0" layoutY="-1.0" pickOnBounds="true">
@@ -21,11 +20,6 @@
       <Label layoutX="137.0" layoutY="242.0" text="Job role in workshop" textFill="#fcf5f5" />
       <TextField layoutX="259.0" layoutY="179.0" prefHeight="40.0" prefWidth="161.0" />
       <TextField layoutX="259.0" layoutY="230.0" prefHeight="40.0" prefWidth="161.0" />
-      <ImageView fitHeight="146.0" fitWidth="310.0" layoutX="148.0" pickOnBounds="true">
-         <image>
-            <Image url="@../../../../../Downloads/Programs/construction-safety.jpg" />
-         </image>
-      </ImageView>
       <Button layoutX="276.0" layoutY="570.0" mnemonicParsing="false" text="Submit" />
       <Label layoutX="141.0" layoutY="296.0" text="Years of experiance" textFill="#f8eeee" />
       <TextField layoutX="259.0" layoutY="284.0" prefHeight="40.0" prefWidth="161.0" />
@@ -41,5 +35,10 @@
       <Label layoutX="76.0" layoutY="527.0" text="Availability for Emergency call " textFill="#f5f4f4" />
       <RadioButton layoutX="257.0" layoutY="527.0" mnemonicParsing="false" text="Yes" textFill="#f5eded" />
       <RadioButton layoutX="382.0" layoutY="527.0" mnemonicParsing="false" text="No" textFill="#f8eeee" />
+      <ImageView fitHeight="150.0" fitWidth="285.0" layoutX="159.0" pickOnBounds="true">
+         <image>
+            <Image url="@construction-safety.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
