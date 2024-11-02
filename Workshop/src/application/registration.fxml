@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="642.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.regController">
+   <children>
+      <ImageView fitHeight="530.0" fitWidth="649.0" layoutX="-3.0" pickOnBounds="true">
+         <image>
+            <Image url="@regis.jpg" />
+         </image>
+      </ImageView>
+      <TextField fx:id="nameField" layoutX="309.0" layoutY="64.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="idField" layoutX="309.0" layoutY="103.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="emailField" layoutX="309.0" layoutY="142.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="ageField" layoutX="309.0" layoutY="181.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="locationField" layoutX="309.0" layoutY="220.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="phoneField" layoutX="309.0" layoutY="259.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </TextField>
+      <Label layoutX="199.0" layoutY="72.0" prefWidth="69.0" text="Name" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="199.0" layoutY="112.0" prefHeight="18.0" prefWidth="70.0" text="ID" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="199.0" layoutY="151.0" prefHeight="18.0" prefWidth="70.0" text="Email" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="199.0" layoutY="188.0" prefHeight="18.0" prefWidth="70.0" text="Age" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="199.0" layoutY="231.0" prefHeight="26.0" prefWidth="70.0" text="Location" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="167.0" layoutY="268.0" prefHeight="26.0" prefWidth="130.0" text="  Phone Number" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="194.0" layoutY="308.0" prefHeight="18.0" prefWidth="83.0" text="Password" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="145.0" layoutY="346.0" prefHeight="26.0" prefWidth="156.0" text="    Confirm Password" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="70.0" layoutY="413.0" prefHeight="26.0" prefWidth="104.0" text="Register as:" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button fx:id="nextButton" layoutX="279.0" layoutY="479.0" mnemonicParsing="false" onAction="#handleNext" prefHeight="26.0" prefWidth="104.0" text="next">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <RadioButton fx:id="engineerRadio" layoutX="195.0" layoutY="415.0" mnemonicParsing="false" text="Engineer" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="roleToggleGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="customerRadio" layoutX="331.0" layoutY="415.0" mnemonicParsing="false" text="Customer" textFill="WHITE" toggleGroup="$roleToggleGroup">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </RadioButton>
+      <RadioButton fx:id="workerRadio" layoutX="471.0" layoutY="414.0" mnemonicParsing="false" text="Worker" textFill="WHITE" toggleGroup="$roleToggleGroup">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </RadioButton>
+      <PasswordField fx:id="passwordField" layoutX="309.0" layoutY="298.0" prefHeight="37.0" prefWidth="199.0" />
+      <PasswordField fx:id="confirmPasswordField" layoutX="309.0" layoutY="338.0" prefHeight="37.0" prefWidth="199.0" />
+   </children>
+    
+      
+</AnchorPane>

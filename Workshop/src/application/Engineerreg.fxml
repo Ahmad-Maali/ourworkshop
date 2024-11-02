@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="517.0" prefWidth="467.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.EngController">
+   <children>
+      <Label layoutX="198.0" layoutY="20.0" prefHeight="17.0" prefWidth="119.0" text="Label" textFill="#fcecec" />
+      <Label layoutX="302.0" layoutY="37.0" text="Gender" />
+      <Label layoutX="297.0" layoutY="99.0" prefHeight="17.0" prefWidth="72.0" text="Certificates" />
+      <Label layoutX="297.0" layoutY="190.0" prefHeight="17.0" prefWidth="72.0" text="Experience" />
+      <TextField fx:id="idTextField" layoutX="380.0" layoutY="-61.0" />
+      <TextField fx:id="nameTextField" layoutX="360.0" layoutY="-97.0" prefHeight="61.0" prefWidth="292.0" />
+      <Label layoutX="320.0" layoutY="273.0" text="Skills" />
+      <ImageView fitHeight="523.0" fitWidth="467.0" layoutY="-4.0" nodeOrientation="INHERIT" pickOnBounds="true">
+         <image>
+            <Image url="@regis.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="V_RESIZE" />
+         </cursor>
+      </ImageView>
+      <Button fx:id="finishButton" layoutX="198.0" layoutY="472.0" mnemonicParsing="false" onAction="#handleFinishButton" prefHeight="25.0" prefWidth="72.0" text="FINISH" />
+      <Label layoutX="74.0" layoutY="183.0" text="Gender" textFill="#f5e5e5" />
+      <Label layoutX="59.0" layoutY="259.0" prefHeight="17.0" prefWidth="72.0" text="Certificates" textFill="#d7c7c7" />
+      <Label layoutX="61.0" layoutY="349.0" prefHeight="17.0" prefWidth="72.0" text="Experience" textFill="#ebd8d8" />
+      <Label layoutX="81.0" layoutY="421.0" text="Skills" textFill="#d7c0c0" />
+      <ImageView fitHeight="150.0" fitWidth="321.0" layoutX="74.0" pickOnBounds="true">
+         <image>
+            <Image url="@eng.jpg" />
+         </image>
+      </ImageView>
+      <RadioButton fx:id="maleRadioButton" layoutX="165.0" layoutY="182.0" mnemonicParsing="false" text="Male" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="genderGroup" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="femaleRadioButton" layoutX="277.0" layoutY="181.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$genderGroup">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </RadioButton>
+      <TextArea fx:id="certificates" layoutX="130.0" layoutY="229.0" prefHeight="78.0" prefWidth="276.0" />
+      <TextArea fx:id="experience" layoutX="130.0" layoutY="321.0" prefHeight="77.0" prefWidth="276.0" />
+      <TextArea fx:id="skills" layoutX="130.0" layoutY="414.0" prefHeight="35.0" prefWidth="276.0" />
+   </children>
+</AnchorPane>
