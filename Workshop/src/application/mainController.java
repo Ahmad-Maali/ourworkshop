@@ -67,6 +67,9 @@ import javafx.stage.Stage;
 		  // Set up the new Scene with the Group as root
 		  stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
 		  Scene scene = new Scene(root);
+		  stage.setX(100);
+		  stage.setY(20);
+		  
 		  stage.setScene(scene); stage.show();
 		  
 
