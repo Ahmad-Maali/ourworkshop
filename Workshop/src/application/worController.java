@@ -81,8 +81,7 @@ public class worController {
 
         // Set ComboBox options (Example options, update with actual options as needed)
     	
-    	
-        comboPreferredShift.getItems().addAll("Morning(start from 7AM)", "Afternoon(start from 2PM)", "Night(start from 8PM)");
+    	comboPreferredShift.getItems().addAll("Morning(start from 7AM)", "Afternoon(start from 2PM)", "Night(start from 8PM)");
         comboEmploymentStatus.getItems().addAll("Full-time", "Part-time", "Freelance");
 
         // Attach event handler to the submit button

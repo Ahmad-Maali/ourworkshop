@@ -3,7 +3,10 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -11,124 +14,139 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdminRegController">
    <children>
-      <AnchorPane fx:id="anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="642.0">
+      <AnchorPane fx:id="contentArea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="713.0" prefWidth="1335.0">
          <children>
-            <ImageView fitHeight="530.0" fitWidth="649.0" layoutX="-3.0" pickOnBounds="true">
+            <ImageView fitHeight="721.0" fitWidth="1187.0" layoutX="148.0" layoutY="-6.0" pickOnBounds="true">
                <image>
                   <Image url="@regis.jpg" />
                </image>
             </ImageView>
-            <TextField layoutX="295.0" layoutY="12.0">
+            <Label layoutX="599.0" prefHeight="35.0" prefWidth="320.0" text="Welcome To The Admin Page" textFill="#f8f4f4">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="customersManagementButton" layoutX="-2.0" layoutY="399.0" mnemonicParsing="false" onAction="#handleCustomersManagementButton" prefHeight="88.0" prefWidth="150.0" scaleY="1.3" text="Customers Managment" />
+            <Button fx:id="engineersManagementButton" layoutX="-2.0" layoutY="171.0" mnemonicParsing="false" onAction="#handleEngineersManagementButton" prefHeight="88.0" prefWidth="150.0" scaleY="1.3" text="Engineers Managment" />
+            <Button fx:id="workersManagementButton" layoutX="-2.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleWorkersManagementButton" prefHeight="88.0" prefWidth="150.0" scaleY="1.3" text="Workers Managment" />
+            <Button fx:id="addAdminButton" layoutX="-2.0" layoutY="626.0" mnemonicParsing="false" onAction="#handleAddAdminButton" prefHeight="78.0" prefWidth="150.0" scaleY="1.3" text="Add Admin" />
+            <Button fx:id="requestsButton" layoutX="-2.0" layoutY="513.0" mnemonicParsing="false" onAction="#handleRequestsButton" prefHeight="88.0" prefWidth="150.0" scaleY="1.3" text="Requests" />
+            <Button fx:id="myInfoButton" layoutX="-2.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleMyInfoButton" prefHeight="88.0" prefWidth="150.0" scaleY="1.3" text="My Informations" />
+            <ProgressBar layoutY="36.0" prefHeight="18.0" prefWidth="1342.0" progress="0.0" />
+            <TextField fx:id="nameField" layoutX="381.0" layoutY="127.0" scaleX="1.3" scaleY="1.2">
                <font>
                   <Font size="16.0" />
                </font>
             </TextField>
-            <TextField layoutX="295.0" layoutY="51.0">
+            <TextField fx:id="idField" layoutX="381.0" layoutY="205.0" scaleX="1.3" scaleY="1.2">
                <font>
                   <Font size="16.0" />
                </font>
             </TextField>
-            <TextField layoutX="295.0" layoutY="90.0">
+            <TextField fx:id="emailField" layoutX="381.0" layoutY="280.0" scaleX="1.3" scaleY="1.2">
                <font>
                   <Font size="16.0" />
                </font>
             </TextField>
-            <TextField layoutX="295.0" layoutY="129.0">
+            <TextField fx:id="ageField" layoutX="381.0" layoutY="354.0" scaleX="1.3" scaleY="1.2">
                <font>
                   <Font size="16.0" />
                </font>
             </TextField>
-            <TextField layoutX="295.0" layoutY="168.0">
+            <TextField fx:id="locationField" layoutX="1015.0" layoutY="127.0" scaleX="1.3" scaleY="1.2">
                <font>
                   <Font size="16.0" />
                </font>
             </TextField>
-            <TextField layoutX="295.0" layoutY="207.0">
+            <TextField fx:id="phoneField" layoutX="1016.0" layoutY="205.0" scaleX="1.3" scaleY="1.2">
                <font>
                   <Font size="16.0" />
                </font>
             </TextField>
-            <Label layoutX="185.0" layoutY="20.0" prefWidth="69.0" text="Name" textFill="WHITE">
+            <Label layoutX="271.0" layoutY="135.0" prefWidth="69.0" scaleX="1.3" scaleY="1.2" text="Name" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="185.0" layoutY="60.0" prefHeight="18.0" prefWidth="70.0" text="ID" textFill="WHITE">
+            <Label layoutX="271.0" layoutY="214.0" prefHeight="18.0" prefWidth="70.0" scaleX="1.3" scaleY="1.2" text="ID" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="185.0" layoutY="99.0" prefHeight="18.0" prefWidth="70.0" text="Email" textFill="WHITE">
+            <Label layoutX="271.0" layoutY="289.0" prefHeight="18.0" prefWidth="70.0" scaleX="1.3" scaleY="1.2" text="Email" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="185.0" layoutY="136.0" prefHeight="18.0" prefWidth="70.0" text="Age" textFill="WHITE">
+            <Label layoutX="273.0" layoutY="361.0" prefHeight="18.0" prefWidth="70.0" scaleX="1.3" scaleY="1.2" text="Age" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="185.0" layoutY="179.0" prefHeight="26.0" prefWidth="70.0" text="Location" textFill="WHITE">
+            <Label layoutX="874.0" layoutY="137.0" prefHeight="26.0" prefWidth="70.0" scaleX="1.3" scaleY="1.2" text="Location" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="153.0" layoutY="216.0" prefHeight="26.0" prefWidth="130.0" text="  Phone Number" textFill="WHITE">
+            <Label layoutX="840.0" layoutY="211.0" prefHeight="26.0" prefWidth="130.0" scaleX="1.3" scaleY="1.2" text="  Phone Number" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="180.0" layoutY="256.0" prefHeight="18.0" prefWidth="83.0" text="Password" textFill="WHITE">
+            <Label layoutX="868.0" layoutY="282.0" prefHeight="18.0" prefWidth="83.0" scaleX="1.3" scaleY="1.2" text="Password" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Label layoutX="131.0" layoutY="294.0" prefHeight="26.0" prefWidth="156.0" text="    Confirm Password" textFill="WHITE">
+            <PasswordField fx:id="passwordField" layoutX="1016.0" layoutY="279.0" prefHeight="37.0" prefWidth="199.0" scaleX="1.3" scaleY="1.2" />
+            <Label layoutX="824.0" layoutY="359.0" prefHeight="26.0" prefWidth="140.0" scaleX="1.3" scaleY="1.2" text="Confirm Password" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Button layoutX="346.0" layoutY="472.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="104.0" text="Finish">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Button>
-            <PasswordField layoutX="295.0" layoutY="246.0" prefHeight="37.0" prefWidth="199.0" />
-            <PasswordField layoutX="295.0" layoutY="286.0" prefHeight="37.0" prefWidth="199.0" />
-            <Label layoutX="141.0" layoutY="373.0" prefHeight="26.0" prefWidth="140.0" text="Educational status" textFill="WHITE">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
-            <PasswordField layoutX="295.0" layoutY="326.0" prefHeight="38.0" prefWidth="199.0" />
-            <TextField layoutX="295.0" layoutY="408.0">
+            <PasswordField fx:id="confirmPasswordField" layoutX="1015.0" layoutY="353.0" prefHeight="37.0" prefWidth="199.0" scaleX="1.3" scaleY="1.2" />
+            <TextField fx:id="ownershipField" layoutX="381.0" layoutY="428.0" scaleX="1.3" scaleY="1.2">
                <font>
                   <Font size="16.0" />
                </font>
             </TextField>
-            <Label layoutX="163.0" layoutY="332.0" prefHeight="26.0" prefWidth="92.0" text="Ownership%" textFill="WHITE">
+            <Label layoutX="240.0" layoutY="437.0" prefHeight="26.0" prefWidth="92.0" scaleX="1.3" scaleY="1.2" text="Ownership%" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <TextField layoutX="295.0" layoutY="367.0" prefHeight="38.0" prefWidth="199.0">
+            <TextField fx:id="workinghoursField" layoutX="1014.0" layoutY="431.0" scaleX="1.3" scaleY="1.2">
                <font>
                   <Font size="16.0" />
                </font>
             </TextField>
-            <Label layoutX="157.0" layoutY="413.0" prefHeight="26.0" prefWidth="108.0" text="Working hours" textFill="WHITE">
+            <Label layoutX="835.0" layoutY="441.0" prefHeight="26.0" prefWidth="108.0" scaleX="1.3" scaleY="1.2" text="Working hours" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <Button layoutX="217.0" layoutY="472.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="104.0" text="Cancel">
+            <Button fx:id="registerButton" layoutX="651.0" layoutY="627.0" mnemonicParsing="false" onAction="#handleRegisterButton" prefHeight="44.0" prefWidth="182.0" text="Finish" />
+            <Label layoutX="196.0" layoutY="514.0" prefHeight="26.0" prefWidth="140.0" scaleX="1.3" scaleY="1.2" text="Educational status" textFill="WHITE">
                <font>
                   <Font size="16.0" />
                </font>
-            </Button>
+            </Label>
+            <Label layoutX="874.0" layoutY="514.0" prefHeight="26.0" prefWidth="62.0" scaleX="1.3" scaleY="1.2" text="Gender" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="maleRadioButton" layoutX="1023.0" layoutY="510.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="108.0" scaleX="1.3" scaleY="1.2" text="Male" textFill="WHITE">
+               <toggleGroup>
+                  <ToggleGroup fx:id="gender" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="femaleRadioButton" layoutX="1156.0" layoutY="510.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="108.0" scaleX="1.3" scaleY="1.2" text="Female" textFill="WHITE" toggleGroup="$gender" />
+            <TextField fx:id="educationalStatusField" layoutX="380.0" layoutY="507.0" scaleX="1.3" scaleY="1.2">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
          </children>
-          
-            
       </AnchorPane>
    </children>
 </AnchorPane>

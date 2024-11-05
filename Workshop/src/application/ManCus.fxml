@@ -35,11 +35,11 @@
                   <ProgressBar layoutY="36.0" prefHeight="18.0" prefWidth="1342.0" progress="0.0" />
                   <ListView layoutX="149.0" layoutY="110.0" prefHeight="608.0" prefWidth="1187.0" />
                   <Label layoutX="249.0" layoutY="24.0" prefHeight="42.0" prefWidth="150.0" text="Customer Managment" />
-                  <Button layoutX="194.0" layoutY="61.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="150.0" text="Edit Engineer" />
-                  <Button layoutX="621.0" layoutY="61.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="150.0" text="Edit Workshop" />
-                  <TextField layoutX="364.0" layoutY="61.0" prefHeight="42.0" prefWidth="150.0" promptText="Name Of Engineer" />
-                  <TextField layoutX="791.0" layoutY="61.0" prefHeight="42.0" prefWidth="150.0" promptText="Name Of Workshop" />
-                  <Button layoutX="1070.0" layoutY="61.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="150.0" text="Delete Customer" />
+                  <Button layoutX="221.0" layoutY="61.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="150.0" text="Edit Engineer" />
+                  <Button layoutX="648.0" layoutY="61.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="150.0" text="Edit Workshop" />
+                  <TextField layoutX="391.0" layoutY="61.0" prefHeight="42.0" prefWidth="150.0" promptText="Name Of Engineer" />
+                  <TextField layoutX="818.0" layoutY="61.0" prefHeight="42.0" prefWidth="150.0" promptText="Name Of Workshop" />
+                  <Button layoutX="1097.0" layoutY="61.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="150.0" text="Delete Customer" />
                </children>
             </AnchorPane>
          </children>

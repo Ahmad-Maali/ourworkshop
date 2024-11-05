@@ -100,111 +100,57 @@ public class ManEngController {
     
 	Parent root;
 	Stage stage;
-	FXMLLoader Loader;
+	FXMLLoader loader;
     
     
         
         
+    // Method to load "My Information" view
     @FXML
     private void handleMyInfoButton(ActionEvent e) throws IOException {
-    	System.out.println("MyInformation");
-    	
-    	
-    		  Loader = new FXMLLoader(getClass().getResource("Admin.fxml"));
-  	  		  Parent root = Loader.load();
-   			  stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
-  			  Scene scene = new Scene(root);
-  			  stage.setScene(scene); stage.show();
-    	
-    	
-    	
-    	
-    	
+        loadScene(e, "Admin.fxml");
     }
-    
-    
 
-        @FXML
-        private void handleEngineersManagementButton(ActionEvent e) throws IOException {
-        	System.out.println("EngineersManagement");
-        	
-        	
-    		  Loader = new FXMLLoader (getClass().getResource("ManEng.fxml"));
-    		  root= Loader.load();
-    		  stage =(Stage)((Node)e.getSource()).getScene().getWindow();
-    		  Scene scene = new Scene(root); 
-    		//  stage.setTitle("Registration");
-    		  stage.setScene(scene); stage.show();
-        	
-        	
-        }
+    // Method to load "Engineers Management" view
+    @FXML
+    private void handleEngineersManagementButton(ActionEvent e) throws IOException {
+        loadScene(e, "ManEng.fxml");
+    }
 
-        @FXML
-        private void handleWorkersManagementButton(ActionEvent e) throws IOException {
-        	System.out.println("WorkersManagement");
-        	
-        	
-    		  Loader = new FXMLLoader (getClass().getResource("ManWor.fxml"));
-    		  root= Loader.load();
-    		  stage =(Stage)((Node)e.getSource()).getScene().getWindow();
-    		  Scene scene = new Scene(root); 
-    		  stage.setScene(scene); stage.show();
-    		  
-        	
-        }
+    // Method to load "Workers Management" view
+    @FXML
+    private void handleWorkersManagementButton(ActionEvent e) throws IOException {
+        loadScene(e, "ManWor.fxml");
+    }
 
-        @FXML
-        private void handleCustomersManagementButton(ActionEvent e) throws IOException {
-        	System.out.println("CustomersManagement");
-        	
-        	
-        	
-    		  Loader = new FXMLLoader (getClass().getResource("ManCus.fxml"));
-    		  root= Loader.load();
-    		  stage =(Stage)((Node)e.getSource()).getScene().getWindow();
-    		  Scene scene = new Scene(root); 
-    		//  stage.setTitle("Registration");
-    		  stage.setScene(scene); stage.show();
-        	
-        	
-        	
-        }
+    // Method to load "Customers Management" view
+    @FXML
+    private void handleCustomersManagementButton(ActionEvent e) throws IOException {
+        loadScene(e, "ManCus.fxml");
+    }
 
-        @FXML
-        private void handleRequestsButton(ActionEvent e) throws IOException {
-        	System.out.println("Requests");
-        	
-        	
-  		  Loader = new FXMLLoader (getClass().getResource("Requests.fxml"));
-  		  root= Loader.load();
-  		  stage =(Stage)((Node)e.getSource()).getScene().getWindow();
-  		  Scene scene = new Scene(root); 
-  		//  stage.setTitle("Registration");
-  		  stage.setScene(scene); stage.show();
-        	
-        }
+    // Method to load "Requests" view
+    @FXML
+    private void handleRequestsButton(ActionEvent e) throws IOException {
+        loadScene(e, "Requests.fxml");
+    }
 
-        
-        
+    // Method to load "Add Admin" view
+    @FXML
+    private void handleAddAdminButton(ActionEvent e) throws IOException {
+        loadScene(e, "AdminReg.fxml");
+    }
 
-        @FXML
-        private void handleAddAdminButton(ActionEvent e) throws IOException {
-        	System.out.println("AddAdmin");
-        	
-    		  Loader = new FXMLLoader (getClass().getResource("AdminReg.fxml"));
-    		  root= Loader.load();
-    		  stage =(Stage)((Node)e.getSource()).getScene().getWindow();
-    		  Scene scene = new Scene(root); 
-    		//  stage.setTitle("Registration");
-    		  stage.setScene(scene); stage.show();
-        	
-        	
-        	
-        }
-        
-        
-        
-        
+    // Utility method for loading a new scene
+    private void loadScene(ActionEvent event, String fxmlFile) throws IOException {
+        loader = new FXMLLoader(getClass().getResource(fxmlFile));
+        root = loader.load();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
         
     }
     
