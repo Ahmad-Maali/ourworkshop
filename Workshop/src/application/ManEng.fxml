@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="713.0" prefWidth="1335.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ManEngController">
+   <children>
+      <AnchorPane layoutX="3.0" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="713.0" prefWidth="1335.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="721.0" fitWidth="1187.0" layoutX="149.0" layoutY="-4.0" pickOnBounds="true">
+               <image>
+                  <Image url="@regis.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="599.0" prefHeight="35.0" prefWidth="320.0" text="Welcome To The Admin Page" textFill="#f8f4f4">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="-2.0" layoutY="399.0" mnemonicParsing="false" onAction="#handleCustomersManagementButton" prefHeight="88.0" prefWidth="150.0" scaleY="1.3" text="Customers Managment" />
+            <Button layoutX="-2.0" layoutY="171.0" mnemonicParsing="false" onAction="#handleEngineersManagementButton" prefHeight="88.0" prefWidth="150.0" scaleY="1.3" text="Engineers Managment" />
+            <Button layoutX="-2.0" layoutY="285.0" mnemonicParsing="false" onAction="#handleWorkersManagementButton" prefHeight="88.0" prefWidth="150.0" scaleY="1.3" text="Workers Managment" />
+            <Button layoutX="-2.0" layoutY="626.0" mnemonicParsing="false" onAction="#handleAddAdminButton" prefHeight="78.0" prefWidth="150.0" scaleY="1.3" text="Add Admin" />
+            <Button layoutX="-2.0" layoutY="513.0" mnemonicParsing="false" onAction="#handleRequestsButton" prefHeight="88.0" prefWidth="150.0" scaleY="1.3" text="Requests" />
+            <Button layoutX="-2.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleMyInfoButton" prefHeight="88.0" prefWidth="150.0" scaleY="1.3" text="My Informations" />
+            <ProgressBar layoutY="36.0" prefHeight="18.0" prefWidth="1342.0" progress="0.0" />
+            <ListView fx:id="engineerListView" layoutX="149.0" layoutY="110.0" prefHeight="608.0" prefWidth="1187.0" />
+            <Button fx:id="deleteButton" layoutX="1046.0" layoutY="61.0" mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="42.0" prefWidth="150.0" text="Delete Engineer" />
+            <Label layoutX="249.0" layoutY="24.0" prefHeight="42.0" prefWidth="150.0" text="Engineer Managment" />
+            <Button fx:id="editButton" layoutX="194.0" layoutY="61.0" mnemonicParsing="false" onAction="#handleEditButton" prefHeight="42.0" prefWidth="150.0" text="Edit Customer" />
+            <Button layoutX="605.0" layoutY="61.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="150.0" text="Edit Workshop" />
+            <TextField layoutX="364.0" layoutY="61.0" prefHeight="42.0" prefWidth="150.0" promptText="Name Of Customer" />
+            <TextField layoutX="775.0" layoutY="61.0" prefHeight="42.0" prefWidth="150.0" promptText="Name Of Workshop" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
