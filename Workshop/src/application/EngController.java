@@ -7,6 +7,9 @@ import javafx.scene.control.Button;
 	import javafx.scene.control.TextArea;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 
 //	import javafx.scene.control.ToggleGroup;
 	import javafx.event.ActionEvent;
@@ -52,6 +55,18 @@ import javafx.stage.Stage;
 	    }
 */
 	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
+	    
 	    @FXML
 	    private AnchorPane anchorpane;
 	    private Parent root;
@@ -80,6 +95,44 @@ import javafx.stage.Stage;
 	        alert.setHeaderText("Your Details:");
 	        alert.setContentText(message);
 	        alert.showAndWait();
+	        
+	        
+	        
+	        try {
+	    			DriverManager.deregisterDriver(new org.postgresql.Driver());
+	    			  String url = "jdbc:postgresql://localhost:5432/postgres";
+	    			  
+	    			 String user= "postgres";
+	    			 String password2 = "123456";
+	    			  
+	    			Connection con =DriverManager.getConnection(url,user,password2);
+	    			
+	    			con.setAutoCommit(false);
+	 
+	    			
+	    			String qry1 = "INSERT INTO engineer VALUES ('" + Main.getName() + "', '" + Main.getID() + "', '" + Main.getEmail() + "', '" +
+	    		              Main.getAge() + "', '" + Main.getLocation() + "', '" + Main.getPhoneNumber() + "', '" + 
+	    		              Main.getPassword() + "', '" +selectedGender+ "', '" +certificatesText+ "', '" +experienceText+ "', '" +skillsText+ "')";
+
+	    		     
+	    			Statement stm = con.createStatement();
+	    			  stm.executeUpdate(qry1);
+	    			  con.commit();
+	    			  con.close();
+	    			  
+	    			} catch (Exception e) {
+	    				// TODO Auto-generated catch block
+	    				e.printStackTrace();
+	    			}
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
+	        
 	        
 	        
 	        stage = (Stage) anchorpane.getScene().getWindow();

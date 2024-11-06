@@ -2,6 +2,9 @@ package application;
 
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -80,6 +83,8 @@ public class regController {
         
         
         
+        
+        
 
         
         String role = "";  // Customer or Engineer or Worker
@@ -140,6 +145,13 @@ public class regController {
                 System.out.println("Please fill all fields.");
                 return;
             }
+        
+        
+        
+        
+        
+        Main.setRegistrationData(name, id, email, age, location, phoneNumber, password);
+
         
         
         
